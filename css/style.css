@@ -7,6 +7,9 @@ html {
 }
 
 body {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   background: #ccc;
 }
@@ -39,3 +42,112 @@ h1 {
 }
 
 /* Your CSS below here */
+
+/* THE BACKGROUND */
+
+.background {
+
+  /* Setup block to cover whole page */
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: whitesmoke;
+
+  /* Back-up image */
+  background:
+    url('../img/top-image.png') top no-repeat;
+  
+  /* Images for top and bottom, and gradient*/
+  background: 
+    url('../img/top-image.png') top no-repeat,
+    url('../img/bottom-image.png') bottom no-repeat;
+  
+  /* Black borders */
+  border-top: 1mm black solid;
+  border-bottom: 1mm black solid;
+}
+
+/* Gradients for top and bottom - position */
+.background::before,
+.background::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100px;
+}
+
+/* Gradients for top and bottom - top */
+.background::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgb(0,0,0,0.5),rgb(0,0,0,0));
+}
+
+/* Gradients for top and bottom - bottom */
+.background::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+/* THE LOGO */
+.company-logo{
+  display: block;
+  width: 126;
+  height: 126;
+  position: absolute;
+  top: 12mm;
+  right: 20mm;
+  background: url('../img/logo.png') no-repeat;
+
+  /* Cross-browser friendly shadow */
+  background-color: black;
+  border-radius: 50%;
+  
+  /* Comment out shadow */
+
+  /*background-size: cover;
+  border-radius: 50%;
+  border: 1px solid black;
+  box-shadow: 0 0 5px black;*/
+
+}
+
+
+/* THE BODY */
+
+.letter {
+  position: relative;
+  top: 300px;
+  font: 10px "Times New Roman";
+}
+
+.text {
+  color: black;
+  column-count: 2;
+}
+
+.title {
+  text-align: center;
+  column-count: 1;
+  font-size: 30px;
+
+  height: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#preface{
+  font-size: 10px;
+  underline: true;
+
+}
+
+#quote {
+  size: 10px;
+  italics: true;
+}
+
