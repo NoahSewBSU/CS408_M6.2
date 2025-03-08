@@ -119,7 +119,7 @@ h1 {
 .letter {
   position: relative;
   top: 300px;
-  font: 10px "Times New Roman";
+  font: 14px "Times New Roman";
 }
 
 .text {
@@ -140,14 +140,13 @@ h1 {
 
 }
 
-#preface{
-  font-size: 10px;
-  underline: true;
+/* BUTTONS */
 
-}
+.button-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
 
-#quote {
-  size: 10px;
-  italics: true;
 }
 
